@@ -1,5 +1,7 @@
-a = 40
-c = 3
-r = a * c
+bebida = input('Digite suas cinco bebidas favoritas: ')
 
-print (r)
+lista = bebida.split(f'\s')
+lista.sort()
+
+for bebida in lista:
+    print(bebida.strip())
