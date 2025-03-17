@@ -1,13 +1,15 @@
-x = 5
-y = 6
-z = 3
-
-def soma_mult(a, b, c = 0):
-    if c == 0:
-        return a * b
+def fatorial(numero):
+    if numero == 0 or numero == 1:
+        return 1
     else:
-        return a + b + c
+        return numero * fatorial(numero - 1)
+    
 
 if __name__ == '__main__':
-    res = soma_mult(x, y, z)
-    print(res)
+    x = int(input('Digite um número inteiro positivo para calcular seu fatorial: '))
+    try:
+        res = fatorial(x)
+    except RecursionError:
+        print(f'O número fornecido é muito grande ou negativo.')
+    else:
+        print(f'O fatorial de {x} é {res}')
