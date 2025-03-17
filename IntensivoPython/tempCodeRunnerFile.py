@@ -1,7 +1,7 @@
-bebida = input('Digite suas cinco bebidas favoritas: ')
+frase = 'Vamos aprender Python hoje.'
+palavras = frase.split()#lista de strings ['Vamos', 'aprender', 'Python', 'hoje.']
+print(palavras)
+print(palavras[1])
 
-lista = bebida.split(f'\s')
-lista.sort()
-
-for bebida in lista:
-    print(bebida.strip())
+for palavra in palavras:
+    print(palavra)
