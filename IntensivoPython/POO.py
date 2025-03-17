@@ -1,3 +1,60 @@
+# Paradigma de programação
+# Classes e Objetos
+#atributos e métodos
+
+class Veiculo:
+    def movimentar(self):
+        #método
+        print(f'Sou um veiculo e me desloco!')
+
+    def __init__(self, fabricante, modelo):
+        self.fabricante = fabricante
+        self.modelo = modelo
+        self.num_registro = None
+        
+
+
+if __name__ == '__main__':
+    meu_veiculo = Veiculo('GM', 'Cadillac Escalade' )
+    meu_veiculo.movimentar()
+    #acessar valores internos
+    print(meu_veiculo.fabricante)
+
+
+#atributo privado
+
+class Veiculo:
+    def movimentar(self):
+        #método
+        print(f'Sou um veiculo e me desloco!')
+
+    def __init__(self, fabricante, modelo):
+        self.__fabricante = fabricante
+        self.__modelo = modelo
+        self.__num_registro = None
+
+
+    #* Setter: É um método que permite gravar um dado dentro de um elemento dentro da classe/objeto
+    def set_num_registro(self, registro):
+        self.__num_registro = registro
+
+    #* Getter: (Um método especial que permite acessar os atributos dentro da classe ou acessar outros elementos dentro da classe)
+    def get_fabr_modelo(self):
+        print(f'Modelo: {self.__modelo}, Fabricante: {self.__fabricante} \n')
+        
+    def get_num_registro(self):
+        return self.__num_registro
+
+
+if __name__ == '__main__':
+    meu_veiculo = Veiculo('GM', 'Cadillac Escalade' )
+    meu_veiculo.movimentar()
+    meu_veiculo.get_fabr_modelo()
+    meu_veiculo.set_num_registro('127849490-0900.15')
+    print(f'Registro: {meu_veiculo.get_num_registro()}\n')
+
+
+# Herança
 
 class Veiculo:
     def movimentar(self):
