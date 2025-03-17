@@ -56,3 +56,38 @@ if __name__ == '__main__':
     resultados = quadrado(valores)
     for g in resultados:
         print(g)
+
+
+# * PARAMETROS OPCIONAIS
+
+# def contar(num=11, caractere='+'):
+#     for i in range(1, num):
+#         print(caractere)
+
+# if __name__ == '__main__':
+#     # contar(caractere='&')#troca o caractere
+#     # contar(num=8, caractere='@') #muda a quantidade de linhas e o caractere
+#     contar(6, '@')
+
+
+# def contar(caractere, num=11): #se deixar sem nada precisa colocar ele primeiro
+#     for i in range(1, num):
+#         print(caractere)
+
+# if __name__ == '__main__':
+#    contar('@', 3)
+#    contar(num=3, caractere='#') #se nomeado a ordem não importa tanto
+
+x = 5
+y = 6
+z = 3
+
+def soma_mult(a, b, c = 0):
+    if c == 0:
+        return a * b
+    else:
+        return a + b + c
+
+if __name__ == '__main__':
+    res = soma_mult(x, y, z)
+    print(res)
